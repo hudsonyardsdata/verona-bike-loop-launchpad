@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import homepageImage from "@/assets/verona-loop-homepage.png";
 import foundersImage from "@/assets/verona-loop-founders.png";
 
@@ -36,12 +35,11 @@ export default function OurStory() {
                 I understand how we got here, but I don't think it's the way we should keep going.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={homepageImage}
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={homepageImage.src}
                 alt="Verona streets and bike infrastructure"
-                fill
-                className="object-cover"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -68,12 +66,11 @@ export default function OurStory() {
 
           {/* Meet the Founders - Image Left */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg md:order-first order-last">
-              <Image
-                src={foundersImage}
+            <div className="rounded-lg overflow-hidden shadow-lg md:order-first order-last">
+              <img
+                src={foundersImage.src}
                 alt="Verona Bike Loop founders and advocates"
-                fill
-                className="object-cover"
+                className="w-full h-auto"
               />
             </div>
             <div>

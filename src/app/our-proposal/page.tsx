@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import wishlistImage from "@/assets/verona-loop-wishlist.png";
 import bikerackImage from "@/assets/verona-loop-bikerack-example.png";
+import mapScreenshot from "@/assets/verona-loop-google-screenshot.png";
 import { MapPin, AlertCircle, Bike, ParkingCircle } from "lucide-react";
 
 export const metadata = {
@@ -87,23 +87,26 @@ export default function OurProposal() {
                 ))}
               </div>
 
-              {/* Google Maps Embed */}
+              {/* Google Maps Screenshot and Link */}
               <div className="mt-6">
-                <h3 className="font-semibold mb-3">View the complete route on Google Maps:</h3>
-                <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
-                  <iframe
-                    src="https://www.google.com/maps/d/embed?mid=1yourMapIdHere&ehbc=2E312F"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                <h3 className="font-semibold mb-3">View the complete route:</h3>
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src={mapScreenshot.src}
+                    alt="Verona Bike Loop route map"
+                    className="w-full h-auto"
                   />
                 </div>
-                <p className="text-sm text-muted-foreground mt-2 italic">
-                  * Please update the Google Maps embed URL with your actual map ID
-                </p>
+                <div className="text-center mt-4">
+                  <a
+                    href="https://www.google.com/maps/dir/Brookdale+Avenue+School/''/Verona+Community+Center/Verona+High+School/Verona+Community+Pool+-+Verona,+NJ/F.+N.+Brown+School/Laning+Avenue+Elementary+School/Brookdale+Avenue+School/@40.8335182,-74.2446747,15z/data=!3m1!4b1!4m65!4m64!1m15!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3m4!1m2!1d-74.2428448!2d40.8241012!3s0x89c3aa989bad71c3:0x5c7230cabde3f560!3m4!1m2!1d-74.2475822!2d40.8239006!3s0x89c3aa9978af0ded:0xa822dfd0de859eed!1m5!1m1!1s0x89c3aa849e6c16d5:0x26f3a5c61d94a681!2m2!1d-74.255336!2d40.8280134!1m5!1m1!1s0x89c30078fb766c79:0x9676a31227168ebd!2m2!1d-74.2566767!2d40.8352972!1m5!1m1!1s0x89c300720e4f68a1:0xab03a1fb722b2629!2m2!1d-74.2480376!2d40.8412784!1m5!1m1!1s0x89c300720e4f68a1:0xaf8cf1a9a413565a!2m2!1d-74.2434479!2d40.8470477!1m10!1m1!1s0x89c30072e74b0543:0x87b3f1205c970fed!2m2!1d-74.2438939!2d40.8391183!3m4!1m2!1d-74.232738!2d40.8360806!3s0x89c3000e9347c623:0x87e0e3bf684a11e!1m5!1m1!1s0x89c30009c2ac66cb:0x15eb828762a7d916!2m2!1d-74.2338586!2d40.8306996!1m5!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3e2!5m1!1e4?authuser=3&entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-secondary underline font-semibold"
+                  >
+                    Click here to see the route
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -138,12 +141,11 @@ export default function OurProposal() {
           </Card>
 
           {/* Wishlist Image */}
-          <div className="relative aspect-[16/10] rounded-lg overflow-hidden shadow-xl">
-            <Image
-              src={wishlistImage}
+          <div className="rounded-lg overflow-hidden shadow-xl">
+            <img
+              src={wishlistImage.src}
               alt="Verona Bike Loop infrastructure wishlist"
-              fill
-              className="object-cover"
+              className="w-full h-auto"
             />
           </div>
 
@@ -205,12 +207,11 @@ export default function OurProposal() {
                 </CardContent>
               </Card>
             </div>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={bikerackImage}
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={bikerackImage.src}
                 alt="Example of quality bike rack infrastructure"
-                fill
-                className="object-cover"
+                className="w-full h-auto"
               />
             </div>
           </div>

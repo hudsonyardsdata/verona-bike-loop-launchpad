@@ -51,7 +51,7 @@ export default function Home() {
               <img
                 src={heroImage.src}
                 alt="Verona Bike Loop - Cyclists enjoying safe bike infrastructure"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>
