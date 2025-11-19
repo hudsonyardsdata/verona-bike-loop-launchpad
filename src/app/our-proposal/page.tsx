@@ -111,42 +111,44 @@ export default function OurProposal() {
             </CardContent>
           </Card>
 
-          {/* Eight Road Crossing Buttons */}
-          <Card>
-            <CardHeader>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <AlertCircle className="w-6 h-6 text-secondary" />
-                </div>
-                <CardTitle className="text-2xl">Eight Road Crossing Buttons</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                Safe crossing points at major intersections with well-marked blinking notifications:
-              </p>
-              <div className="space-y-2">
-                {crossingButtons.map((crossing, index) => (
-                  <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
-                    <span className="text-secondary font-bold">{index + 1}.</span>
-                    <div>
-                      <span className="font-semibold">{crossing.location}</span>
-                      <span className="text-muted-foreground"> - {crossing.road}</span>
-                      {crossing.note && <span className="text-primary ml-2">{crossing.note}</span>}
-                    </div>
+          {/* Eight Road Crossing Buttons and Wishlist Image */}
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <AlertCircle className="w-6 h-6 text-secondary" />
                   </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                  <CardTitle className="text-2xl">Eight Road Crossing Buttons</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Safe crossing points at major intersections with well-marked blinking notifications:
+                </p>
+                <div className="space-y-2">
+                  {crossingButtons.map((crossing, index) => (
+                    <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
+                      <span className="text-secondary font-bold">{index + 1}.</span>
+                      <div>
+                        <span className="font-semibold">{crossing.location}</span>
+                        <span className="text-muted-foreground"> - {crossing.road}</span>
+                        {crossing.note && <span className="text-primary ml-2">{crossing.note}</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
-          {/* Wishlist Image */}
-          <div className="rounded-lg overflow-hidden shadow-xl">
-            <img
-              src={wishlistImage.src}
-              alt="Verona Bike Loop infrastructure wishlist"
-              className="w-full h-auto"
-            />
+            {/* Wishlist Image */}
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <img
+                src={wishlistImage.src}
+                alt="Verona Bike Loop infrastructure wishlist"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           {/* Nine Dedicated Lanes */}
