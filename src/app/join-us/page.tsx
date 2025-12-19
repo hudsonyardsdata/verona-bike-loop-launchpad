@@ -151,19 +151,19 @@ export default function JoinUs() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                <strong>Donate to Montclair Bike & Walk</strong>, our partner organization. Funds will be dedicated to a Verona-specific fund.
+                <strong>Donate to the Verona Bike Loop</strong> directly. We are a partner organization of Montclair Bike & Walk, and your funds will be dedicated to a Verona-specific fund.
               </p>
               <p className="text-muted-foreground">
                 We use their infrastructure and they share our vision for safer streets and better bike infrastructure throughout Essex County.
               </p>
               <Button asChild size="lg" variant="default" className="w-full md:w-auto">
                 <a
-                  href="https://www.bikewalkmontclair.org/donate"
+                  href="https://donorbox.org/verona-bike-loop"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2"
                 >
-                  Donate Now
+                  Support the Loop Today
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>

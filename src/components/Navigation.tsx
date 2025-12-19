@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -39,6 +40,11 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <Button asChild variant="default" size="sm" className="font-semibold">
+              <a href="https://donorbox.org/verona-bike-loop" target="_blank" rel="noopener noreferrer">
+                Support the Loop
+              </a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,6 +73,11 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
+              <Button asChild variant="default" className="w-full font-semibold">
+                <a href="https://donorbox.org/verona-bike-loop" target="_blank" rel="noopener noreferrer">
+                  Support the Loop Today
+                </a>
+              </Button>
             </div>
           </div>
         )}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import wishlistImage from "@/assets/verona-loop-wishlist.png";
 import bikerackImage from "@/assets/verona-loop-bikerack-example.png";
 import mapScreenshot from "@/assets/verona-loop-google-screenshot.png";
+import hubAndSpokesImage from "@/assets/verona-loop-hub-and-spokes.jpeg";
 import { MapPin, AlertCircle, Bike, ParkingCircle } from "lucide-react";
 
 export const metadata = {
@@ -87,25 +88,22 @@ export default function OurProposal() {
                 ))}
               </div>
 
-              {/* Google Maps Screenshot and Link */}
+              {/* Hub and Spokes Image and Explanation */}
               <div className="mt-6">
-                <h3 className="font-semibold mb-3">View the complete route:</h3>
-                <div className="rounded-lg overflow-hidden shadow-lg">
+                <div className="rounded-lg overflow-hidden shadow-lg mb-4">
                   <img
-                    src={mapScreenshot.src}
-                    alt="Verona Bike Loop route map"
+                    src={hubAndSpokesImage.src}
+                    alt="Verona Bike Loop Hub and Spokes diagram"
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="text-center mt-4">
-                  <a
-                    href="https://www.google.com/maps/dir/Brookdale+Avenue+School/''/Verona+Community+Center/Verona+High+School/Verona+Community+Pool+-+Verona,+NJ/F.+N.+Brown+School/Laning+Avenue+Elementary+School/Brookdale+Avenue+School/@40.8335182,-74.2446747,15z/data=!3m1!4b1!4m65!4m64!1m15!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3m4!1m2!1d-74.2428448!2d40.8241012!3s0x89c3aa989bad71c3:0x5c7230cabde3f560!3m4!1m2!1d-74.2475822!2d40.8239006!3s0x89c3aa9978af0ded:0xa822dfd0de859eed!1m5!1m1!1s0x89c3aa849e6c16d5:0x26f3a5c61d94a681!2m2!1d-74.255336!2d40.8280134!1m5!1m1!1s0x89c30078fb766c79:0x9676a31227168ebd!2m2!1d-74.2566767!2d40.8352972!1m5!1m1!1s0x89c300720e4f68a1:0xab03a1fb722b2629!2m2!1d-74.2480376!2d40.8412784!1m5!1m1!1s0x89c300720e4f68a1:0xaf8cf1a9a413565a!2m2!1d-74.2434479!2d40.8470477!1m10!1m1!1s0x89c30072e74b0543:0x87b3f1205c970fed!2m2!1d-74.2438939!2d40.8391183!3m4!1m2!1d-74.232738!2d40.8360806!3s0x89c3000e9347c623:0x87e0e3bf684a11e!1m5!1m1!1s0x89c30009c2ac66cb:0x15eb828762a7d916!2m2!1d-74.2338586!2d40.8306996!1m5!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3e2!5m1!1e4?authuser=3&entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-secondary underline font-semibold"
-                  >
-                    Click here to see the route
-                  </a>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    The Verona loop is meant to help people get across the quadrants of Verona, which are most difficult to cross because they are bisecting major state Roads: Lakeside Ave., Bloomfield Avenue, and to some extent Fairview and Grove.
+                  </p>
+                  <p>
+                    The hub is therefore the loop, but the spokes interconnecting the different locations on the loop are direct roads to the city center that will have bike infrastructure at their end points, enabling bikers to know that if they go there, they can leave their bike safely.
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -217,6 +215,42 @@ export default function OurProposal() {
               />
             </div>
           </div>
+
+          {/* Full Route Map */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="text-2xl">The Complete Route</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div className="rounded-lg overflow-hidden shadow-lg mb-6">
+                <img
+                  src={mapScreenshot.src}
+                  alt="Verona Bike Loop route map"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="space-y-4">
+                 <p className="text-lg text-center font-medium">
+                  The entire loop is about 6 miles long. It would take a person walking two hours to walk it, or a person biking about 30 minutes or E biking in 20 minutes.
+                </p>
+                <div className="text-center">
+                  <a
+                    href="https://www.google.com/maps/dir/Brookdale+Avenue+School/''/Verona+Community+Center/Verona+High+School/Verona+Community+Pool+-+Verona,+NJ/F.+N.+Brown+School/Laning+Avenue+Elementary+School/Brookdale+Avenue+School/@40.8335182,-74.2446747,15z/data=!3m1!4b1!4m65!4m64!1m15!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3m4!1m2!1d-74.2428448!2d40.8241012!3s0x89c3aa989bad71c3:0x5c7230cabde3f560!3m4!1m2!1d-74.2475822!2d40.8239006!3s0x89c3aa9978af0ded:0xa822dfd0de859eed!1m5!1m1!1s0x89c3aa849e6c16d5:0x26f3a5c61d94a681!2m2!1d-74.255336!2d40.8280134!1m5!1m1!1s0x89c30078fb766c79:0x9676a31227168ebd!2m2!1d-74.2566767!2d40.8352972!1m5!1m1!1s0x89c300720e4f68a1:0xab03a1fb722b2629!2m2!1d-74.2480376!2d40.8412784!1m5!1m1!1s0x89c300720e4f68a1:0xaf8cf1a9a413565a!2m2!1d-74.2434479!2d40.8470477!1m10!1m1!1s0x89c30072e74b0543:0x87b3f1205c970fed!2m2!1d-74.2438939!2d40.8391183!3m4!1m2!1d-74.232738!2d40.8360806!3s0x89c3000e9347c623:0x87e0e3bf684a11e!1m5!1m1!1s0x89c30009c2ac66cb:0x15eb828762a7d916!2m2!1d-74.2338586!2d40.8306996!1m5!1m1!1s0x89c3aaa173bb9bd1:0xc41082fb8997b40a!2m2!1d-74.237767!2d40.8265899!3e2!5m1!1e4?authuser=3&entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-secondary underline font-semibold"
+                  >
+                    Click here to see the route on Google Maps
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Vision Statement */}
           <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
